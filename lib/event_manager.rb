@@ -11,7 +11,7 @@ def legislators_by_zipcode(zip)
   civic_info.key = File.read('secret.key').strip
 
   begin
-    legislators = civic_info.representative_info_by_address(
+    civic_info.representative_info_by_address(
       address: zip,
       levels: 'country',
       roles: ['legislatorUpperBody', 'legislatorLowerBody']

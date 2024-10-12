@@ -5,7 +5,7 @@
   <title>Thank You!</title>
 </head>
 <body>
-  <h1>Thanks <%= name %></h1>
+  <h1>Thanks Aya</h1>
   <p>Thanks for coming to our conference.  We couldn't have done it without you!</p>
 
   <p>
@@ -14,18 +14,10 @@
   </p>
 
   <table>
-    <% if legislators.kind_of?(Array) %>
-      <tr><th>Name</th><th>Website</th></tr>
-        <% legislators.each do |legislator| %>
-        <tr>
-          <td><%= "#{legislator.name}" %></td>
-          <td><%= "#{legislator.urls.join(" ")}" unless legislator.urls.nil? %></td>
-        </tr>
-        <% end %>
-    <% else %>
+    
       <th></th>
-      <td><%= "#{legislators}" %></td>
-    <% end %>
+      <td>You can find your representatives by visiting www.commoncause.org/take-action/find-elected-officials</td>
+    
   </table>
 </body>
 </html>
